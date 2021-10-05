@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .columna {
+    -moz-box-shadow: inset 20px 0px 46px -28px rgba(0, 0, 0, 0.59);
+    -webkit-box-shadow: inset 20px 0px 46px -28px rgba(0, 0, 0, 0.59);
+    align-items: center;
+    box-shadow: inset 20px 0px 46px -28px rgba(0, 0, 0, 0.59);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      width: 100%;
+    }
+
+    .container {
+      -webkit-box-shadow: 3px 3px 13px -1px rgba(0, 0, 0, 0.43);
+      align-items: center;
+      background-color: #673ab7;
+      border-radius: 5px;
+      box-shadow: 3px 3px 13px -1px rgba(0, 0, 0, 0.43);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+      justify-content: center;
+      width: 600px;
+
+      @media (min-width: 768px) {
+        animation: containerAnimation 2s;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+      }
+
+      h1 {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 3em;
+      }
+
+      .border {
+        width: 60%;
+        background: white;
+        height: 2px;
+        margin: 5px;
+      }
+
+      button {
+        margin-top: 20px;
+        color: white;
+        background-color: #7a4ec5;
+      }
+    }
+  }
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(201, 201, 201) 50%,
+    #673ab7 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+  overflow: hidden;
+}
+
+// .bg3 {
+//   animation-duration: 5s;
+//   overflow: hidden;
+// }
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+@keyframes containerAnimation {
+  0% {
+    transform: translateX(-50px);
+  }
+
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
