@@ -1,14 +1,11 @@
-<mat-toolbar color="primary" class="navbar">
-  <mat-toolbar-row>
-    <button mat-icon-button (click)="emitToggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <h1>Proyect</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button> Homepage </a>
-      <a mat-button> Info </a>
-      <a mat-button> Contact </a>
+<div class="navbar">
+  <div class="navbar-container">
+    <div class="link link-2 main-link">
+      <a [routerLink]="['/']" routerLinkActive="active">Home</a>
     </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <div class="link link-1">
+      <a [routerLink]="['/contact']" routerLinkActive="active">Info</a>
+    </div>
+    <div class="link link-3"><a routerLinkActive="active">Contact</a></div>
+  </div>
+</div>

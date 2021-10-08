@@ -1,4 +1,101 @@
-section {
-  height: 80vh;
-  background-color: red;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+.flip-card {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  perspective: 1000px;
+  margin-bottom: 20px;
+  // margin-top: 0px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  -webkit-backdrop-filter: blur(8.5px);
+  -webkit-backface-visibility: hidden; /* Safari */
+  backdrop-filter: blur(8.5px);
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: black;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  svg {
+    bottom: 60%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .first {
+    background-color: #e37dff;
+    bottom: 0;
+    height: 60%;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .second {
+    background-color: #65b7ff;
+    bottom: 0;
+    height: 60%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+h3 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  div {
+    margin-bottom: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+  }
 }
