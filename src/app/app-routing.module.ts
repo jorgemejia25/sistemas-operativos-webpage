@@ -4,9 +4,17 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () =>
       import('./index/index.module').then((m) => m.IndexModule),
+  },
+  {
+    path: 'info',
+    loadChildren: () => import('./info/info.module').then((m) => m.InfoModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 

@@ -1,0 +1,43 @@
+.card {
+  -webkit-backdrop-filter: blur(8.5px);
+  -webkit-backface-visibility: hidden; /* Safari */
+  backdrop-filter: blur(8.5px);
+  backface-visibility: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: none;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  width: 80%;
+  text-align: center;
+  color: rgb(83, 83, 83);
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 60%;
+    max-width: 70%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+
+  .nombre {
+    font-size: 1.7em;
+    font-weight: 900;
+  }
+
+  .descripcion {
+    font-size: 1.1em;
+  }
+
+  .precio {
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: 1.3em;
+  }
+}

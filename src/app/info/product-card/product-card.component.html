@@ -1,0 +1,8 @@
+<div class="card">
+  <img [src]="producto.rutaImagen" alt="" />
+  <p class="nombre">{{ producto.nombre }}</p>
+  <div class="descripcion">{{ producto.descripcion }}</div>
+  <div class="precio">
+    {{ producto.precio | currency: "GTQ":"symbol-narrow" }}
+  </div>
+</div>
