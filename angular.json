@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "jenkins:build:production",
+            "firebaseProject": "jenkins-test-313db",
+            "firebaseHostingSite": "jenkins-test-313db"
+          }
         }
       }
     }

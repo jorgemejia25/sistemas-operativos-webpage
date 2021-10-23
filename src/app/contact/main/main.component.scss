@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap");
+
+.row {
+  height: 60vh;
+  padding: 80px 0px 20px 0px;
+}
+
+.columna-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 3.3em;
+    font-weight: 900;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+
+  .line {
+    background-color: #241f3a;
+    width: 40px;
+    height: 10px;
+  }
+}
+
+.contact-info {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.send-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  input,
+  textarea {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #2929295e;
+    margin-bottom: 20px;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 5px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2929295e;
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  input::placeholder {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #2929295e;
+    font-weight: 600;
+    font-family: "Nunito Sans", sans-serif;
+  }
+
+  textarea {
+    resize: none;
+    border: 2px solid #2929295e;
+    text-transform: none;
+    height: 50%;
+  }
+
+  button {
+    animation: color 12s ease infinite;
+    background-color: rgba(227, 125, 255, 1);
+    border-radius: 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    font-weight: 900;
+    height: 50px;
+    margin-top: 20px;
+    width: 150px;
+    margin-left: auto;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: rgba(227, 125, 255, 1);
+  }
+  50% {
+    background-color: rgba(101, 183, 255, 1);
+  }
+  100% {
+    background-color: rgba(227, 125, 255, 1);
+  }
+}

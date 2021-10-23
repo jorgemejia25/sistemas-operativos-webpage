@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jenkins-test-313db": {
+      "hosting": {
+        "jenkins": [
+          "jenkins-test-313db"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jenkins-test-313db"
+  }
+}

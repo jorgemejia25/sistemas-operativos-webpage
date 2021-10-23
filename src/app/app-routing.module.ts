@@ -2,6 +2,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { NgModule } from '@angular/core';
 
+// Lazy loading para una carga mas rápida
+
 const routes: Routes = [
   {
     path: 'home',
@@ -11,6 +13,11 @@ const routes: Routes = [
   {
     path: 'info',
     loadChildren: () => import('./info/info.module').then((m) => m.InfoModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
   },
   {
     path: '**',

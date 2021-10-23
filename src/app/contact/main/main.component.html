@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-6 columna-1">
+    <div class="titulo">
+      <h3>Contactanos</h3>
+      <div class="line"></div>
+    </div>
+    <div class="contact-info">Información de contacto | +502 3291 1119</div>
+  </div>
+  <div class="col-6 columna-2">
+    <div class="send-info" [formGroup]="mailForm">
+      <input
+        type="text"
+        class="nombre"
+        placeholder="Nombre"
+        formControlName="nombre"
+      />
+      <input
+        type="email"
+        class="email"
+        placeholder="email"
+        formControlName="email"
+      />
+      <textarea cols="30" rows="10" formControlName="mensaje"></textarea>
+      <button mat-flat-button color="primary" (click)="enviar()">Enviar</button>
+    </div>
+  </div>
+</div>
